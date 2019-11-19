@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,9 +40,8 @@ public class LobbyManager : MonoBehaviour
 
     public void ClickNextBtn()
     {
-        SceneManager.LoadScene("ChatRoomScene");
-        GameManager.singleton.SetNetworkAddress("127.0.0.1");
-        GameManager.singleton.SetNetworkPort(portText.text);
+        GameManager.singleton.SetNetworkAddressAndPort("127.0.0.1", Int32.Parse(portText.text));
+        SceneManager.LoadScene("LabScene");
     }
 
     public void ClickCreateRoomBtn()
