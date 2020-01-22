@@ -1578,6 +1578,7 @@ MonoBehaviour:
   inputGroup: {fileID: 697907955}
   portText: {fileID: 140178070}
   noticeText: {fileID: 248623820}
+  ipAddress: 129.100.255.19
 --- !u!4 &1811663606
 Transform:
   m_ObjectHideFlags: 0
