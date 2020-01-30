@@ -17,7 +17,7 @@ public class LobbyManager : MonoBehaviour
     public GameObject inputGroup;
     public Text portText;
     public Text noticeText;
-    public string ipAddress;
+    public Text ipAddressText;
 
     GameManager gameManager;
 
@@ -41,7 +41,7 @@ public class LobbyManager : MonoBehaviour
 
     public void ClickNextBtn()
     {
-        GameManager.singleton.SetNetworkAddressAndPort(ipAddress, Int32.Parse(portText.text));
+        GameManager.singleton.SetNetworkAddressAndPort(ipAddressText.text, Int32.Parse(portText.text));
         SceneManager.LoadScene("LabScene");
     }
 
