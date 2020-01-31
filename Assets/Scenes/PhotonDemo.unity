@@ -673,8 +673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNameText: {fileID: 711223107}
-  CreateRoomBtn: {fileID: 0}
-  JoinRoomBtn: {fileID: 0}
+  CreateRoomBtn: {fileID: 788945753}
+  JoinRoomBtn: {fileID: 2131015647}
   nickName: 123
 --- !u!1 &1235706743
 GameObject:
