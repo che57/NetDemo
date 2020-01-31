@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class NetworkLobbyController : MonoBehaviourPunCallbacks
 {
     public Text roomNameText;
+    public Button CreateRoomBtn;
+    public Button JoinRoomBtn;
 
     [SerializeField]
     private string nickName; // get from user managerment system
@@ -17,23 +19,23 @@ public class NetworkLobbyController : MonoBehaviourPunCallbacks
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
-        JoinLobbyOnClick();
     }
 
     public override void OnConnectedToMaster()
     {
-        //PhotonNetwork.AutomaticallySyncScene = true; // all players load to the same scence at the same time;
+        PhotonNetwork.JoinLobby();
+    }
+
+    public override void OnJoinedLobby()
+    {
+        CreateRoomBtn.interactable = true;
+        JoinRoomBtn.interactable = true;
     }
 
     public void UserNicknameUpdate()
     {
         PhotonNetwork.NickName = nickName;
         PlayerPrefs.SetString("NickName", nickName);
-    }
-
-    public void JoinLobbyOnClick()
-    {
-        PhotonNetwork.JoinLobby();
     }
 
     public void CreateRoom()

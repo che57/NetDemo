@@ -4,8 +4,10 @@ using System.IO;
 using UnityEngine;
 using Photon.Pun;
 
-public class LabSetupController : MonoBehaviour
+public class LabSetupController : MonoBehaviourPunCallbacks
 {
+
+    public GameObject otherPlayerPrefab;
     // Start is called before the first frame update
     void Start()
     {

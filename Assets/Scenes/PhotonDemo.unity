@@ -511,7 +511,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 788945754}
   m_OnClick:
     m_PersistentCalls:
@@ -673,6 +673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNameText: {fileID: 711223107}
+  CreateRoomBtn: {fileID: 0}
+  JoinRoomBtn: {fileID: 0}
   nickName: 123
 --- !u!1 &1235706743
 GameObject:
@@ -1203,7 +1205,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2131015648}
   m_OnClick:
     m_PersistentCalls:
