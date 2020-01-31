@@ -7,7 +7,7 @@ using Photon.Pun;
 public class LabSetupController : MonoBehaviourPunCallbacks
 {
 
-    public GameObject otherPlayerPrefab;
+    public GameObject [] otherPlayerPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,4 +25,12 @@ public class LabSetupController : MonoBehaviourPunCallbacks
         Debug.Log("Creating Player");
         PhotonNetwork.Instantiate(Path.Combine("Prefabs", "PhotonPlayer1"), Vector3.zero, Quaternion.identity);
     }
+
+    void BindPlayer() {
+
+        
+
+    }
+
+    
 }
