@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &906767967726253944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,6 +17,9 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
 --- !u!114 &4269606948238685261
+=======
+--- !u!114 &2845182048331710923
+>>>>>>> a230250da4990fcb4865650d9b8183ed282b9956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,10 +37,32 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
+<<<<<<< HEAD
   - {fileID: 906767967726253944}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+=======
+  - {fileID: 4463382615626154529}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &4463382615626154529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3862722956763915407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+>>>>>>> a230250da4990fcb4865650d9b8183ed282b9956
 --- !u!1 &6369084447627002755
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,11 +124,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6369084447627002754}
     m_Modifications:
-    - target: {fileID: 6100240671108141914, guid: 5042243251e71ee4bb70c59f503a2e56,
-        type: 3}
-      propertyPath: m_Name
-      value: ImageTarget
-      objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141892, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -157,6 +178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100240671108141914, guid: 5042243251e71ee4bb70c59f503a2e56,
+        type: 3}
+      propertyPath: m_Name
+      value: ImageTarget
       objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141912, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
