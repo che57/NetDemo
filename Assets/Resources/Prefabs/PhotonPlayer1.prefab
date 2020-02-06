@@ -98,6 +98,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6369084447627002754}
     m_Modifications:
+    - target: {fileID: 6100240671108141914, guid: 5042243251e71ee4bb70c59f503a2e56,
+        type: 3}
+      propertyPath: m_Name
+      value: ImageTarget
+      objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141892, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -156,42 +161,37 @@ PrefabInstance:
     - target: {fileID: 6100240671108141892, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141892, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141892, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100240671108141893, guid: 5042243251e71ee4bb70c59f503a2e56,
-        type: 3}
-      propertyPath: mWidth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100240671108141893, guid: 5042243251e71ee4bb70c59f503a2e56,
-        type: 3}
-      propertyPath: mHeight
-      value: 0.502963
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100240671108141912, guid: 5042243251e71ee4bb70c59f503a2e56,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141913, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 6100240671108141914, guid: 5042243251e71ee4bb70c59f503a2e56,
+    - target: {fileID: 6100240671108141912, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
-      propertyPath: m_Name
-      value: ImageTarget
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100240671108141893, guid: 5042243251e71ee4bb70c59f503a2e56,
+        type: 3}
+      propertyPath: mWidth
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100240671108141893, guid: 5042243251e71ee4bb70c59f503a2e56,
+        type: 3}
+      propertyPath: mHeight
+      value: 7.544445
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5042243251e71ee4bb70c59f503a2e56, type: 3}
