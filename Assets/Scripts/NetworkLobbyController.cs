@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class NetworkLobbyController : MonoBehaviourPunCallbacks
 {
     public Text roomNameText;
-    public Button CreateRoomBtn;
-    public Button JoinRoomBtn;
+    public GameObject mainUI;
+    public Text roomInfo;
 
     [SerializeField]
     private string nickName; // get from user managerment system
@@ -18,6 +18,7 @@ public class NetworkLobbyController : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        mainUI.SetActive(false);
         PhotonNetwork.ConnectUsingSettings();
     }
 
@@ -28,8 +29,7 @@ public class NetworkLobbyController : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        CreateRoomBtn.interactable = true;
-        JoinRoomBtn.interactable = true;
+        mainUI.SetActive(true);
     }
 
     public void UserNicknameUpdate()
@@ -63,7 +63,7 @@ public class NetworkLobbyController : MonoBehaviourPunCallbacks
 
     public void JoinRoom()
     {
-        roomName = roomNameText.text;
+        roomName = roomInfo.text;
         PhotonNetwork.JoinRoom(roomName);
     }
 }

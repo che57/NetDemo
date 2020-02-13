@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LabScene.unity
     guid: 53c4d7cdc57c2eb488e403d6898ad231
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 240d5af7a2b52394995c11490d4d8b91
+  - enabled: 1
     path: Assets/Scenes/PhotonDemo.unity
     guid: bcd0d8d946493d344b0961a550d90f89
   - enabled: 1
