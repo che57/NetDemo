@@ -224,9 +224,9 @@ public class RoomManagement : MonoBehaviour
 
         if(resultTF == "true")
         {
-            SearchRoomName.text = response.GetField("data").GetField("roomName").ToString();
-            SearchRoomTitle.text = response.GetField("data").GetField("roomTitle").ToString();
-            SearchRoomCreator.text = response.GetField("data").GetField("creator").ToString();
+            SearchRoomName.text = response.GetField("data").GetField("roomName").ToString().Trim('"');
+            SearchRoomTitle.text = response.GetField("data").GetField("roomTitle").ToString().Trim('"');
+            SearchRoomCreator.text = response.GetField("data").GetField("creator").ToString().Trim('"');
             Debug.Log(response.GetField("data").GetField("roomPublic").ToString().GetType());
             //if ("true".Equals(response.GetField("data").GetField("roomPublic").ToString()))
             SearchRoomPub.text = "Public";
