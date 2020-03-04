@@ -106,6 +106,7 @@ public class RoomManagement : MonoBehaviour
             createPop.SetActive(false);
             CreateErr.SetActive(false);
             gameController.singleton.roomId = loginInfo.GetField("data").GetField("_id").ToString().Trim('"');
+            gameController.roomOwner = loginInfo.GetField("data").GetField("creator").ToString().Trim('"');
         }
 
         else
@@ -233,7 +234,9 @@ public class RoomManagement : MonoBehaviour
             Debug.Log(response.GetField("data").GetField("roomPublic").ToString().GetType());
             //if ("true".Equals(response.GetField("data").GetField("roomPublic").ToString()))
             SearchRoomPub.text = "Public";
-           
+
+            gameController.roomOwner = response.GetField("data").GetField("creator").ToString().Trim('"');
+
             //else
             //    SearchRoomPub.text = "Private";
         }

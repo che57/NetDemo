@@ -17,7 +17,7 @@ public class labRoomManager : MonoBehaviour
     void Start()
     {
         id = gameController.singleton.roomId;
-        owner = gameController.singleton.roomOwner;
+        owner = gameController.roomOwner;
         username = gameController.userName;
     }
 
