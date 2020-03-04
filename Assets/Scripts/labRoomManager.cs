@@ -11,14 +11,21 @@ using UnityEngine.SceneManagement;
 public class labRoomManager : MonoBehaviour
 {
     public string id;
+    public string owner;
+    public string username;
     // Start is called before the first frame update
     void Start()
     {
         id = gameController.singleton.roomId;
+        owner = gameController.singleton.roomOwner;
+        username = gameController.userName;
     }
 
     public void tryQuit(){
-        StartCoroutine(quitRoom());
+        if (username == owner)
+            StartCoroutine(quitRoom());
+        else
+            SceneManager.LoadScene("PhotonDemo");
 }
 
     IEnumerator quitRoom()

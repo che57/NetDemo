@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class gameController : MonoBehaviour
 {
     static public string userName;
+    static public string roomOwner;
     public string roomId;
     public InputField username;
     public Text id;
