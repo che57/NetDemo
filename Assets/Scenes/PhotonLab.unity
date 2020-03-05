@@ -771,3 +771,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
+  owner: 
+  username: 
