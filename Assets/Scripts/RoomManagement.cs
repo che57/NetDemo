@@ -99,10 +99,14 @@ public class RoomManagement : MonoBehaviour
     public void VerifyCreate(JSONObject loginInfo)
     {
         string judgeMsg = loginInfo.GetField("type").ToString();
+        Debug.Log("loginInfo" + loginInfo.GetField("data").GetField("_id").ToString().Trim('"'));
+
         if (judgeMsg == "true")
         {
             createPop.SetActive(false);
             CreateErr.SetActive(false);
+            gameController.singleton.roomId = loginInfo.GetField("data").GetField("_id").ToString().Trim('"');
+            gameController.roomOwner = loginInfo.GetField("data").GetField("creator").ToString().Trim('"');
         }
 
         else
@@ -230,6 +234,9 @@ public class RoomManagement : MonoBehaviour
             Debug.Log(response.GetField("data").GetField("roomPublic").ToString().GetType());
             //if ("true".Equals(response.GetField("data").GetField("roomPublic").ToString()))
             SearchRoomPub.text = "Public";
+
+            gameController.roomOwner = response.GetField("data").GetField("creator").ToString().Trim('"');
+
             //else
             //    SearchRoomPub.text = "Private";
         }
