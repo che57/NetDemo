@@ -33,7 +33,7 @@ public class labRoomManager : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("roomId", id);
 
-        using (UnityWebRequest quitRoom = UnityWebRequest.Post("http://127.0.0.1:8081/room/quitRoom", form))
+        using (UnityWebRequest quitRoom = UnityWebRequest.Post("http://174.119.178.27:65530/room/quitRoom", form))
         {
             quitRoom.SetRequestHeader("content-type", "application/x-www-form-urlencoded");
 

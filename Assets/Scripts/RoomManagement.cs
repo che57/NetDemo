@@ -66,7 +66,7 @@ public class RoomManagement : MonoBehaviour
         form.AddField("roomPublic", "true");
 
 
-        using (UnityWebRequest createRoom = UnityWebRequest.Post("http://127.0.0.1:8081/room/createRoom", form))
+        using (UnityWebRequest createRoom = UnityWebRequest.Post("http://174.119.178.27:65530/room/createRoom", form))
         {
             createRoom.SetRequestHeader("content-type", "application/x-www-form-urlencoded");
 
@@ -120,7 +120,7 @@ public class RoomManagement : MonoBehaviour
 
     IEnumerator browseRoom()
     {
-        using (UnityWebRequest createRoom = UnityWebRequest.Get("http://127.0.0.1:8081/room/browseRooms"))
+        using (UnityWebRequest createRoom = UnityWebRequest.Get("http://174.119.178.27:65530/room/browseRooms"))
         {
             createRoom.SetRequestHeader("content-type", "application/x-www-form-urlencoded");
 
@@ -195,7 +195,7 @@ public class RoomManagement : MonoBehaviour
         WWWForm searchform = new WWWForm();
         searchform.AddField("roomId", roomId);
         
-        using (UnityWebRequest searchRoom = UnityWebRequest.Post("http://127.0.0.1:8081/room/searchRoom", searchform))
+        using (UnityWebRequest searchRoom = UnityWebRequest.Post("http://174.119.178.27:65530/room/searchRoom", searchform))
         {
             searchRoom.SetRequestHeader("content-type", "application/x-www-form-urlencoded");
 

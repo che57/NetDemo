@@ -64,7 +64,7 @@ public class ServerConnect : MonoBehaviour
         form.AddField("role", role.options[role.value].text);
         Debug.Log(role.options[role.value].text.GetType());
 
-        using (UnityWebRequest regis = UnityWebRequest.Post("http://127.0.0.1:8081/account/signup", form))
+        using (UnityWebRequest regis = UnityWebRequest.Post("http://174.119.178.27:65530/account/signup", form))
         {
             regis.SetRequestHeader("content-type", "application/x-www-form-urlencoded");
 
@@ -100,7 +100,7 @@ public class ServerConnect : MonoBehaviour
         form.AddField("password", password.text);
         Debug.Log(form);
 
-        using (UnityWebRequest login = UnityWebRequest.Post("http://127.0.0.1:8081/account/authenticate", form))
+        using (UnityWebRequest login = UnityWebRequest.Post("http://174.119.178.27:65530/account/authenticate", form))
         {
             login.SetRequestHeader("content-type", "application/x-www-form-urlencoded");
 
