@@ -18,8 +18,17 @@ public class NetworkLobbyController : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        mainUI.SetActive(false);
-        PhotonNetwork.ConnectUsingSettings();
+        if (PhotonNetwork.IsConnectedAndReady)
+        {
+            print("PhotonNetwork.IsConnectedAndReady == true");
+            PhotonNetwork.JoinLobby();
+        }
+        else
+        {
+            print("PhotonNetwork.IsConnectedAndReady == false");
+            mainUI.SetActive(false);
+            PhotonNetwork.ConnectUsingSettings();
+        }
     }
 
     public override void OnConnectedToMaster()
