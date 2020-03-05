@@ -152,7 +152,8 @@ MonoBehaviour:
   playerPrefabs: []
   playerViews: []
   models: []
-  otherPlayerPrefab: {fileID: 109842, guid: 029c041c331bb0c4cb4b48887b6508da, type: 3}
+  otherPlayerPrefab: {fileID: -927199367670048503, guid: 3abaf4235aceaba48ac02c6c26fb8613,
+    type: 3}
 --- !u!4 &444768903
 Transform:
   m_ObjectHideFlags: 0
