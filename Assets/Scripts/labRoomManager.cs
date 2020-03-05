@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Text;
@@ -8,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 
 
-public class labRoomManager : MonoBehaviour
+public class labRoomManager : MonoBehaviourPunCallbacks
 {
     public string id;
     public string owner;
@@ -25,7 +27,11 @@ public class labRoomManager : MonoBehaviour
         if (username == owner)
             StartCoroutine(quitRoom());
         else
+        {
+            PhotonNetwork.Disconnect();
             SceneManager.LoadScene("PhotonDemo");
+        }
+
 }
 
     IEnumerator quitRoom()
@@ -64,6 +70,7 @@ public class labRoomManager : MonoBehaviour
 
         if (quitMsg == "true")
         {
+            PhotonNetwork.Disconnect();
             SceneManager.LoadScene("PhotonDemo");
         }
 
