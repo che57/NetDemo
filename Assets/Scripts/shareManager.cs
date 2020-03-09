@@ -6,11 +6,18 @@ using UnityEngine.UI;
 
 public class shareManager : MonoBehaviour
 {
-    
+    public GameObject sharePanel;
+    public Text roomId;
+
     public void shareClick()
     {
-        TextEditor _clipBoard = new TextEditor
-        { text = gameController.singleton.roomId };
-        _clipBoard.Copy();
+        roomId.text = "Room Id: " + gameController.singleton.roomId;
+        sharePanel.SetActive(true);
+    }
+
+    public void shareClose()
+    {
+        sharePanel.SetActive(false);
+        roomId.text = "";
     }
 }
