@@ -11,6 +11,24 @@ public class LabSetupController : MonoBehaviourPunCallbacks
     public GameObject [] playerViews;
     public GameObject [] models;
     public GameObject otherPlayerPrefab;
+    public GameObject player;
+    public GameObject target;
+    public Transform otherPlayerRelativeTranform;
+    public Vector3 PlayerRelativePosition
+    {
+        get
+        {
+            return player.transform.position - target.transform.position;
+        }
+    }
+
+    public Vector3 OtherPlyerPosition
+    {
+        get
+        {
+            return otherPlayerRelativeTranform.position + target.transform.position;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +61,4 @@ public class LabSetupController : MonoBehaviourPunCallbacks
         }
 
     }
-
-    
 }
