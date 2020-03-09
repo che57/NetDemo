@@ -21,6 +21,9 @@ public class labRoomManager : MonoBehaviourPunCallbacks
         id = gameController.singleton.roomId;
         owner = gameController.roomOwner;
         username = gameController.userName;
+        Debug.Log("id is " + id);
+        Debug.Log("owner is " + owner);
+
     }
 
     public void tryQuit(){

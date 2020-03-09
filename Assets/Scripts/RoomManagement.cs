@@ -99,6 +99,7 @@ public class RoomManagement : MonoBehaviour
     public void VerifyCreate(JSONObject loginInfo)
     {
         string judgeMsg = loginInfo.GetField("type").ToString();
+        Debug.Log(loginInfo);
         Debug.Log("loginInfo" + loginInfo.GetField("data").GetField("_id").ToString().Trim('"'));
 
         if (judgeMsg == "true")
