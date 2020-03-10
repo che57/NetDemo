@@ -269,6 +269,9 @@ MonoBehaviour:
   models: []
   otherPlayerPrefab: {fileID: 6369084447627002755, guid: 033c1a2cf6289fe4a9f4e11a0db024a2,
     type: 3}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  otherPlayerRelativeTranform: {fileID: 0}
 --- !u!4 &444768903
 Transform:
   m_ObjectHideFlags: 0
@@ -994,7 +997,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 50}
+  m_SizeDelta: {x: 600, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1412645077
 GameObject:
