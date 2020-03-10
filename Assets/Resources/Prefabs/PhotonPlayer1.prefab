@@ -37,6 +37,18 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &800320907911897128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3862722956763915407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09bec117b048894989045c7ff9e2045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6369084447627002755
 GameObject:
   m_ObjectHideFlags: 0
