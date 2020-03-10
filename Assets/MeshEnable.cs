@@ -7,12 +7,11 @@ public class MeshEnable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    this.gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
