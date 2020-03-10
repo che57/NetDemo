@@ -56,7 +56,9 @@ public class LabSetupController : MonoBehaviourPunCallbacks
             if(!player.GetComponent<PhotonView>().IsMine && player.transform.Find("ImageTarget").childCount == 1)
             {
                 Debug.Log("y oyoyoetrhjiogasodifvhnxaocgnba;pERFg");
-                Instantiate(otherPlayerPrefab, player.transform.GetChild(0)); 
+                GameObject otherPlayer = Instantiate(otherPlayerPrefab, player.transform.GetChild(0));
+                otherPlayer.GetComponentInChildren<MeshRenderer>().enabled = true;
+
             }
         }
 
