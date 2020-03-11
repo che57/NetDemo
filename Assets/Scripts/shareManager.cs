@@ -8,14 +8,14 @@ using UnityEngine.UI;
 public class shareManager : MonoBehaviour
 {
     public GameObject sharePanel;
-    public Text roomId;
+    public InputField roomId;
 
 
     public void shareClick()
     {
-        roomId.text = "Room Id has been copied to your clipper borad. Send it!";
+        roomId.text = gameController.singleton.roomId;
         sharePanel.SetActive(true);
-        GUIUtility.systemCopyBuffer = gameController.singleton.roomId;
+        
     }
 
     public void shareClose()
