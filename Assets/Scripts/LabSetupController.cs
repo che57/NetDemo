@@ -64,7 +64,6 @@ public class LabSetupController : MonoBehaviourPunCallbacks
         {
             if(!player.GetComponent<PhotonView>().IsMine && player.transform.childCount == 0)
             {
-                print("other player position: " + player.transform.position.ToString());
                 GameObject otherPlayer = Instantiate(otherPlayerPrefab, player.transform);
                 otherPlayer.transform.position = player.transform.position + brain.transform.position;
                 otherPlayers.Add(otherPlayer);
@@ -78,6 +77,7 @@ public class LabSetupController : MonoBehaviourPunCallbacks
         foreach (var otherPlayer in otherPlayers)
         {
             otherPlayer.transform.position = otherPlayer.transform.parent.position + brain.transform.position;
+            print("other player position: " + otherPlayer.transform.parent.position.ToString());
         }
     }
 }
