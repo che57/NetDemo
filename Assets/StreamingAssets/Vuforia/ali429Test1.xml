@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="CokeCand" size="1.000000 1.414516" />
+    <ImageTarget name="Side3" size="1.000000 1.000000" />
     <ImageTarget name="222222" size="1.000000 0.502963" />
     <ImageTarget name="TextTest" size="15.000000 7.544445" />
     <ImageTarget name="Target3" size="25.000000 18.750000" />
     <ImageTarget name="maxresdefault" size="165.000000 92.812500" />
+    <CylinderTarget name="ImageCan" sideLength="1.590000"/>
   </Tracking>
 </QCARConfig>
