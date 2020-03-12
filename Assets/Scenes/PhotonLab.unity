@@ -267,7 +267,7 @@ MonoBehaviour:
   playerPrefabs: []
   playerViews: []
   models: []
-  otherPlayerPrefab: {fileID: 6369084447627002755, guid: 033c1a2cf6289fe4a9f4e11a0db024a2,
+  otherPlayerPrefab: {fileID: 5004434587742590717, guid: 988b5f2593861294dbe16e7a06f284ab,
     type: 3}
   player: {fileID: 0}
   target: {fileID: 0}

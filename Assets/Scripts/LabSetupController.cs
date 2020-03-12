@@ -11,56 +11,53 @@ public class LabSetupController : MonoBehaviourPunCallbacks
     public GameObject [] playerViews;
     public GameObject [] models;
     public GameObject otherPlayerPrefab;
+    public GameObject brain;
+    public GameObject hand;
     public GameObject player;
-    public GameObject target;
-    public Transform otherPlayerRelativeTranform;
-    public Vector3 PlayerRelativePosition
-    {
-        get
-        {
-            return player.transform.position - target.transform.position;
-        }
-    }
 
-    public Vector3 OtherPlyerPosition
-    {
-        get
-        {
-            return otherPlayerRelativeTranform.position + target.transform.position;
-        }
-    }
     // Start is called before the first frame update
     void Start()
     {
         CreatePlayer();
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         BindOtherPlayers();
+        player.transform.position = hand.transform.position - brain.transform.position;
+
+      
     }
 
     private void CreatePlayer()
     {
-        Debug.Log("Creating Player");
-        PhotonNetwork.Instantiate(Path.Combine("Prefabs", "PhotonPlayer1"), Vector3.zero, Quaternion.identity);
-    }
+        player = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "PhotonPlayer1"), Vector3.zero, Quaternion.identity);
 
-    void BindOtherPlayers() {
+        brain = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "Brain Target"), new Vector3(-100,-100,-100), Quaternion.identity);
+
+        hand = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "Hand Target"), new Vector3(-100, -100, -100), Quaternion.identity);
+
+
+  }
+
+  void BindOtherPlayers() {
 
         playerPrefabs = GameObject.FindGameObjectsWithTag("Player");
 
         foreach (GameObject player in playerPrefabs)
         {
-            if(!player.GetComponent<PhotonView>().IsMine && player.transform.Find("ImageTarget").childCount == 1)
+            if(!player.GetComponent<PhotonView>().IsMine && player.transform.childCount == 0)
             {
-                Debug.Log("y oyoyoetrhjiogasodifvhnxaocgnba;pERFg");
-                GameObject otherPlayer = Instantiate(otherPlayerPrefab, player.transform.GetChild(0));
-                otherPlayer.GetComponentInChildren<MeshRenderer>().enabled = true;
+
+            GameObject otherPlayer = Instantiate(otherPlayerPrefab, player.transform);
+            otherPlayer.transform.position = player.transform.position + brain.transform.position;
 
             }
         }
 
     }
+
 }
