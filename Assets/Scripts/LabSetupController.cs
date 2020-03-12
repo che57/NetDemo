@@ -69,7 +69,6 @@ public class LabSetupController : MonoBehaviourPunCallbacks
                 otherPlayers.Add(otherPlayer);
             }
         }
-
     }
 
     void UpdateOtherPlayersPosition()
