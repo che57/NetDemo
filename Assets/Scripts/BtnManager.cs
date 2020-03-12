@@ -53,6 +53,7 @@ public class BtnManager : MonoBehaviour
 
     public void QuitBtn()
     {
+        gameController.singleton.reset();
         SceneManager.LoadScene("Menu");
     }
 }

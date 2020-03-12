@@ -666,12 +666,17 @@ PrefabInstance:
     - target: {fileID: 1621995530158311203, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 280
+      value: 356
       objectReference: {fileID: 0}
     - target: {fileID: 1621995530158311203, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 303
+      value: 312
+      objectReference: {fileID: 0}
+    - target: {fileID: 1621995530158311203, guid: 420abee27781f194b8eae4062002186e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 380
       objectReference: {fileID: 0}
     - target: {fileID: 1621995530531611319, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
@@ -928,8 +933,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95c48d1902cd7e4c952bf07c2c61d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userName: 
+  roomOwner: 
   roomId: 
-  username: {fileID: 0}
   id: {fileID: 0}
 --- !u!114 &1142964089 stripped
 MonoBehaviour:

@@ -142,9 +142,9 @@ public class ServerConnect : MonoBehaviour
     public void VerifyLogin(JSONObject loginInfo)
     {
         string trueOrFalse = loginInfo.GetField("type").ToString();
-
         if (trueOrFalse == "true")
         {
+            gameController.singleton.userName = loginInfo.GetField("data").GetField("username").ToString().Trim('"');
             SceneManager.LoadScene("PhotonDemo");
         }
         else

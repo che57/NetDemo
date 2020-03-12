@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class gameController : MonoBehaviour
 {
-    static public string userName;
-    static public string roomOwner;
+    public string userName;
+    public string roomOwner;
     public string roomId;
-    public InputField username;
     public Text id;
     static public gameController singleton;
 
@@ -21,8 +20,8 @@ public class gameController : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void LoginPassName()
+    public void reset()
     {
-        userName = username.text;
+        userName = null;
     }
 }

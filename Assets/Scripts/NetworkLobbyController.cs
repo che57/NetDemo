@@ -39,7 +39,7 @@ public class NetworkLobbyController : MonoBehaviourPunCallbacks
         else
         {
             print("PhotonNetwork.IsConnectedAndReady == false");
-            mainUI.SetActive(false);
+            mainUI.SetActive(false); 
             PhotonNetwork.ConnectUsingSettings();
         }
     }

@@ -43,7 +43,7 @@ public class RoomManagement : MonoBehaviour
 
     private void Start()
     {
-        UserNameText.text = "Welcome, " + gameController.userName;
+        UserNameText.text = "Welcome, " + gameController.singleton.userName;
     }
 
 
@@ -57,7 +57,7 @@ public class RoomManagement : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("roomName", roomName.text);
         form.AddField("password", roomName.text);
-        form.AddField("creator", gameController.userName);
+        form.AddField("creator", gameController.singleton.userName);
         form.AddField("roomTitle", "123");
         form.AddField("roomPublic", "true");
 
@@ -103,7 +103,7 @@ public class RoomManagement : MonoBehaviour
             createPop.SetActive(false);
             CreateErr.SetActive(false);
             gameController.singleton.roomId = loginInfo.GetField("data").GetField("_id").ToString().Trim('"');
-            gameController.roomOwner = loginInfo.GetField("data").GetField("creator").ToString().Trim('"');
+            gameController.singleton.roomOwner = loginInfo.GetField("data").GetField("creator").ToString().Trim('"');
             NetworkLobbyController.singleton.CreateRoom();
         }
 
@@ -233,7 +233,7 @@ public class RoomManagement : MonoBehaviour
             //if ("true".Equals(response.GetField("data").GetField("roomPublic").ToString()))
             SearchRoomPub.text = "Public";
 
-            gameController.roomOwner = response.GetField("data").GetField("creator").ToString().Trim('"');
+            gameController.singleton.roomOwner = response.GetField("data").GetField("creator").ToString().Trim('"');
 
             //else
             //    SearchRoomPub.text = "Private";
