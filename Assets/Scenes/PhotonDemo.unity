@@ -281,7 +281,7 @@ PrefabInstance:
     - target: {fileID: 1621995528994588577, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -181
+      value: -172
       objectReference: {fileID: 0}
     - target: {fileID: 1621995528994588577, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
@@ -411,7 +411,7 @@ PrefabInstance:
     - target: {fileID: 1621995529499413867, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -231.6
+      value: -226.00003
       objectReference: {fileID: 0}
     - target: {fileID: 1621995529499413867, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
@@ -431,17 +431,17 @@ PrefabInstance:
     - target: {fileID: 1621995529628834634, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1621995529628834634, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1209814631}
+      objectReference: {fileID: 1022202870}
     - target: {fileID: 1621995529628834634, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CreateRoom
+      value: CreateBtnOnClick
       objectReference: {fileID: 0}
     - target: {fileID: 1621995529628834634, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
@@ -676,7 +676,7 @@ PrefabInstance:
     - target: {fileID: 1621995530600402247, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -231.6
+      value: -226
       objectReference: {fileID: 0}
     - target: {fileID: 1621995530600402247, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
@@ -686,7 +686,7 @@ PrefabInstance:
     - target: {fileID: 1621995530600402247, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -181
+      value: -172
       objectReference: {fileID: 0}
     - target: {fileID: 1621995530600402247, guid: 420abee27781f194b8eae4062002186e,
         type: 3}
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomName: {fileID: 374015050}
-  roomPW: {fileID: 1495510673}
+  roomPW: {fileID: 0}
   searchRoomId: {fileID: 1142964089}
   createPop: {fileID: 861550300}
   roomLine: {fileID: 5434100883918068719, guid: af59df958d81c3a489b498a8b1ed54ba,
@@ -1115,18 +1115,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1495510673 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1621995530327715935, guid: 420abee27781f194b8eae4062002186e,
-    type: 3}
-  m_PrefabInstance: {fileID: 499900704}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1675989458 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1621995530819816411, guid: 420abee27781f194b8eae4062002186e,
