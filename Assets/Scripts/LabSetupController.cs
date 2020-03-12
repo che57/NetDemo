@@ -77,7 +77,7 @@ public class LabSetupController : MonoBehaviourPunCallbacks
     {
         foreach (var otherPlayer in otherPlayers)
         {
-            otherPlayer.transform.position += brain.transform.position;
+            otherPlayer.transform.position = otherPlayer.transform.parent.position + brain.transform.position;
         }
     }
 }
