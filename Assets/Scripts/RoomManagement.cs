@@ -51,16 +51,12 @@ public class RoomManagement : MonoBehaviour
     IEnumerator createRoom()
     {
         //So if the password is left empty, it will be set the same as roomName;
-        if (roomPW.text == "")
-        {
-            roomPW = roomName;
-        }
 
         
 
         WWWForm form = new WWWForm();
         form.AddField("roomName", roomName.text);
-        form.AddField("password", roomPW.text);
+        form.AddField("password", roomName.text);
         form.AddField("creator", gameController.userName);
         form.AddField("roomTitle", "123");
         form.AddField("roomPublic", "true");
