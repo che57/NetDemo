@@ -179,27 +179,37 @@ PrefabInstance:
     - target: {fileID: 6100240671108141892, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 15
+      value: 1.846702
       objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141892, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 15
+      value: 1.846702
       objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141892, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 15
+      value: 1.846702
       objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141893, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: mWidth
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141893, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
       propertyPath: mHeight
-      value: 7.544445
+      value: 1.846702
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100240671108141893, guid: 5042243251e71ee4bb70c59f503a2e56,
+        type: 3}
+      propertyPath: mTrackableName
+      value: Untitled-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100240671108141893, guid: 5042243251e71ee4bb70c59f503a2e56,
+        type: 3}
+      propertyPath: mAspectRatio
+      value: 1.846702
       objectReference: {fileID: 0}
     - target: {fileID: 6100240671108141912, guid: 5042243251e71ee4bb70c59f503a2e56,
         type: 3}
