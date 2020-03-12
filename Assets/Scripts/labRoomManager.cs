@@ -15,17 +15,14 @@ public class labRoomManager : MonoBehaviourPunCallbacks
     public string id;
     public string owner;
     public string username;
-
-    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
         id = gameController.singleton.roomId;
         owner = gameController.roomOwner;
         username = gameController.userName;
-        
-        //Instantiate a player prefab for voice chat
-        Instantiate(Player, new Vector3(200, 1, 200), Quaternion.identity);
+        Debug.Log("id is " + id);
+        Debug.Log("owner is " + owner);
 
     }
 

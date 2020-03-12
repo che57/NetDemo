@@ -108,6 +108,7 @@ public class RoomManagement : MonoBehaviour
             CreateErr.SetActive(false);
             gameController.singleton.roomId = loginInfo.GetField("data").GetField("_id").ToString().Trim('"');
             gameController.roomOwner = loginInfo.GetField("data").GetField("creator").ToString().Trim('"');
+            NetworkLobbyController.singleton.CreateRoom();
         }
 
         else

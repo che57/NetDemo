@@ -10,10 +10,23 @@ public class NetworkLobbyController : MonoBehaviourPunCallbacks
     public Text roomNameText;
     public GameObject mainUI;
     public Text roomInfo;
+    public static NetworkLobbyController singleton;
 
     [SerializeField]
     private string nickName; // get from user managerment system
     private string roomName;
+
+    private void Awake()
+    {
+        if(singleton == null)
+        {
+            singleton = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
