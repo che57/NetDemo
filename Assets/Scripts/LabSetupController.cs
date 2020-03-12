@@ -14,15 +14,16 @@ public class LabSetupController : MonoBehaviourPunCallbacks
     GameObject brain;
     GameObject hand;
     public GameObject player;
-  public GameObject handModel;
-  public GameObject brainModel;
+    public GameObject handModel;
+    public GameObject brainModel;
+    List<GameObject> otherPlayers;
 
 
   // Start is called before the first frame update
-  void Start()
+    void Start()
     {
         CreatePlayer();
-        
+        otherPlayers = new List<GameObject>();
         
     }
 
@@ -31,8 +32,7 @@ public class LabSetupController : MonoBehaviourPunCallbacks
     {
         BindOtherPlayers();
         player.transform.position = hand.transform.position - brain.transform.position;
-
-      
+        UpdateOtherPlayersPosition();
     }
 
     private void CreatePlayer()
@@ -42,21 +42,21 @@ public class LabSetupController : MonoBehaviourPunCallbacks
         brain = Instantiate(brainModel, new Vector3(-100,-100,-100), Quaternion.identity);
 
         hand = Instantiate(handModel, new Vector3(-100, -100, -100), Quaternion.identity);
-    if (player == null) {
-      Debug.Log("player not found"); }
-    if (brain == null)
-    {
-      Debug.Log("brain not found");
+        if (player == null) {
+          Debug.Log("player not found"); }
+        if (brain == null)
+        {
+          Debug.Log("brain not found");
+        }
+        if (hand == null)
+        {
+          Debug.Log("hand not found");
+        }
+
+
     }
-    if (hand == null)
-    {
-      Debug.Log("hand not found");
-    }
 
-
-  }
-
-  void BindOtherPlayers() {
+    void BindOtherPlayers() {
 
         playerPrefabs = GameObject.FindGameObjectsWithTag("Player");
 
@@ -65,12 +65,19 @@ public class LabSetupController : MonoBehaviourPunCallbacks
             if(!player.GetComponent<PhotonView>().IsMine && player.transform.childCount == 0)
             {
 
-            GameObject otherPlayer = Instantiate(otherPlayerPrefab, player.transform);
-            otherPlayer.transform.position = player.transform.position + brain.transform.position;
-
+                GameObject otherPlayer = Instantiate(otherPlayerPrefab, player.transform);
+                otherPlayer.transform.position = player.transform.position + brain.transform.position;
+                otherPlayers.Add(otherPlayer);
             }
         }
 
     }
 
+    void UpdateOtherPlayersPosition()
+    {
+        foreach (var otherPlayer in otherPlayers)
+        {
+            otherPlayer.transform.position += brain.transform.position;
+        }
+    }
 }
