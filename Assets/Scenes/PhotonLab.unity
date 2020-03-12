@@ -270,8 +270,10 @@ MonoBehaviour:
   otherPlayerPrefab: {fileID: 5004434587742590717, guid: 988b5f2593861294dbe16e7a06f284ab,
     type: 3}
   player: {fileID: 0}
-  target: {fileID: 0}
-  otherPlayerRelativeTranform: {fileID: 0}
+  handModel: {fileID: 5004434587742590717, guid: 988b5f2593861294dbe16e7a06f284ab,
+    type: 3}
+  brainModel: {fileID: 8889537267432864197, guid: d8a949e49051d60428d0bf8ff52e55c7,
+    type: 3}
 --- !u!4 &444768903
 Transform:
   m_ObjectHideFlags: 0

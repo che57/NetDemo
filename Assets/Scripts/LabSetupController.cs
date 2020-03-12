@@ -11,12 +11,15 @@ public class LabSetupController : MonoBehaviourPunCallbacks
     public GameObject [] playerViews;
     public GameObject [] models;
     public GameObject otherPlayerPrefab;
-    public GameObject brain;
-    public GameObject hand;
+    GameObject brain;
+    GameObject hand;
     public GameObject player;
+  public GameObject handModel;
+  public GameObject brainModel;
 
-    // Start is called before the first frame update
-    void Start()
+
+  // Start is called before the first frame update
+  void Start()
     {
         CreatePlayer();
         
@@ -36,9 +39,19 @@ public class LabSetupController : MonoBehaviourPunCallbacks
     {
         player = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "PhotonPlayer1"), Vector3.zero, Quaternion.identity);
 
-        brain = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "Brain Target"), new Vector3(-100,-100,-100), Quaternion.identity);
+        brain = Instantiate(brainModel, new Vector3(-100,-100,-100), Quaternion.identity);
 
-        hand = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "Hand Target"), new Vector3(-100, -100, -100), Quaternion.identity);
+        hand = Instantiate(handModel, new Vector3(-100, -100, -100), Quaternion.identity);
+    if (player == null) {
+      Debug.Log("player not found"); }
+    if (brain == null)
+    {
+      Debug.Log("brain not found");
+    }
+    if (hand == null)
+    {
+      Debug.Log("hand not found");
+    }
 
 
   }
