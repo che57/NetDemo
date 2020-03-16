@@ -34,6 +34,7 @@ public class LabSetupController : MonoBehaviourPunCallbacks
         player.transform.position = hand.transform.position - brain.transform.position;
         // Quaternion relative = Quaternion.Inverse(a) * b;
         player.transform.rotation = Quaternion.Inverse(brain.transform.rotation) * hand.transform.rotation;
+        //B.brain.transform.rotation * Quaternion.Inverse(A.brain.transform.rotation) * A.hand.transform.rotation = A.hand.transform.rotation in B
         UpdateOtherPlayersPosition();
     }
 
@@ -78,7 +79,7 @@ public class LabSetupController : MonoBehaviourPunCallbacks
         foreach (var otherPlayer in otherPlayers)
         {
             otherPlayer.transform.position = otherPlayer.transform.parent.position + brain.transform.position;
-            otherPlayer.transform.rotation = otherPlayer.transform.parent.rotation;
+            otherPlayer.transform.rotation = brain.transform.rotation * otherPlayer.transform.parent.rotation;
             //print("other player position: " + otherPlayer.transform.parent.position.ToString());
         }
     }
