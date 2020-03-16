@@ -44,7 +44,7 @@ public class LabSetupController : MonoBehaviourPunCallbacks
 
         brain = Instantiate(brainModel, new Vector3(-100,-100,-100), Quaternion.identity);
 
-        hand = Instantiate(handModel, new Vector3(-100, -100, -100), Quaternion.identity);
+        hand = Instantiate(handModel, new Vector3(-100, -100, -100), new Quaternion(0,-90,90,0));
         if (player == null) {
           Debug.Log("player not found"); }
         if (brain == null)
