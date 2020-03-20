@@ -59,8 +59,8 @@ public class LabSetupController : MonoBehaviourPunCallbacks
 
     }
 
-    void BindOtherPlayers() {
-
+    void BindOtherPlayers() 
+    {
         playerPrefabs = GameObject.FindGameObjectsWithTag("Player");
 
         foreach (GameObject player in playerPrefabs)
@@ -79,7 +79,7 @@ public class LabSetupController : MonoBehaviourPunCallbacks
         foreach (var otherPlayer in otherPlayers)
         {
             otherPlayer.transform.position = otherPlayer.transform.parent.position + brain.transform.position;
-            otherPlayer.transform.rotation = brain.transform.rotation * otherPlayer.transform.parent.rotation;
+            //otherPlayer.transform.rotation = brain.transform.rotation * otherPlayer.transform.parent.rotation;
             //print("other player position: " + otherPlayer.transform.parent.position.ToString());
         }
     }
